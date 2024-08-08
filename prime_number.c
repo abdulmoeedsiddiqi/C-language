@@ -4,13 +4,17 @@ int main(){
     int n, check=0;
     printf("Enter a number : ");
     scanf("%d",&n);
+    if(n==1 || n==0){
+        check=1;
+    }
+    else{
     for(int i=2; i<=sqrt(n) ; i++){
         if(n%i==0){
             check=1;
             break;
         }
     }
-
+    }
     if(check){
       printf("%d is a not a prime number.",n);
     }
